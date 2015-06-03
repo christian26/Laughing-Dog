@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  <Dzamil Klos> -- <Developer> -- <@likedigital>
+
+  <Maciej Chrominski> -- <Designer> -- <@likedigital>
+
+# THANKS
+
+  <Like Digital Media>
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3

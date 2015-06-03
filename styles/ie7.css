@@ -1,0 +1,28 @@
+.page-content{
+	display: block;
+	position: static;
+	text-align: center;
+}
+#about .inner{
+	padding-left: 5%;
+}
+#about .column{
+	display: block;
+	float: left;
+}
+.about #main_header, .clients #main_header, .contact #main_header{
+	display: block;
+}
+#main_header li{
+	display: inline;
+}
+#clients{
+	overflow: visible;
+	height: auto;
+}
+#contact .contact-email, #contact .or{
+	display: inline;
+}
+#contact .or{
+	margin-top: -30px;
+}

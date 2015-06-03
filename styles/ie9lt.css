@@ -1,0 +1,42 @@
+body.contact, body.home, body.about{
+	overflow: hidden;
+}
+.page-content{
+	background-position: center center;
+}
+.logo, .social-icons, .inner, .content-nav{
+	display: block !important;
+}
+.social-icons li, .content-nav li{
+	display: inline !important;
+}
+.content-nav li.contact{
+	margin-right: 0;
+}
+#clients{
+	background-image: url(../images/clients-bg-ie.jpg);
+}
+#clients .client-logos{
+	position: static !important;
+	margin-top: 150px;
+	border-bottom: 1px solid #857500 !important;
+}
+#clients .client-logos a{
+	border-top: 1px solid #857500 !important;
+	border-right: 1px solid #857500 !important;
+}
+.client-logos a.darkroom{
+  background: url(../images/logos/ie/darkroom_logo.png) no-repeat center center;
+}
+.client-logos a.matthew-miller{
+  background: url(../images/logos/ie/matthew_miller_logo.png) no-repeat center center;
+}
+.client-logos a.galvin{
+  background: url(../images/logos/ie/galvin_logo.png) no-repeat center center;
+}
+#contact{
+	background-image: url(../images/contact-bg-ie.jpg);
+}
+#contact .contact-email{
+	border: 1px solid #525252;
+}

@@ -1,0 +1,596 @@
+/*
+ * Web Starter Kit
+ *
+ * Multi-screen layout styles for your page. Brought to you by the
+ * Web Starter Kit team.
+ *
+ */
+
+ /* FONTS */
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato_reg/lato-reg-webfont.eot');
+    src: url('../fonts/lato_reg/lato-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lato_reg/lato-reg-webfont.woff') format('woff'),
+         url('../fonts/lato_reg/lato-reg-webfont.ttf') format('truetype'),
+         url('../fonts/lato_reg/lato-reg-webfont.svg#latoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'droid_serifitalic';
+    src: url('../fonts/droid_serif/italic/droidserif-italic-webfont.eot');
+    src: url('../fonts/droid_serif/italic/droidserif-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/droid_serif/italic/droidserif-italic-webfont.woff') format('woff'),
+         url('../fonts/droid_serif/italic/droidserif-italic-webfont.ttf') format('truetype'),
+         url('../fonts/droid_serif/italic/droidserif-italic-webfont.svg#droid_serifitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.speedUp {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  min-height: 100%;
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  /*overflow: hidden;*/
+}
+
+#main_header{
+  width: 100%;
+  background: #2b2b2b url(../images/header_bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 80px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+}
+#main_header{
+  display: none;
+}
+#main_header ul, .content-nav ul{
+  padding: 0;
+  margin: 0;
+  padding-top:30px;
+}
+#main_header li, .content-nav li{
+  margin-right: 35px;
+}
+#main_header li, #main_header a, .content-nav li, .content-nav a{
+  display: inline-block;
+  text-decoration: none;
+}
+#main_header li:last-child, .content-nav li:last-child{
+  margin-right: 0;
+}
+#main_header a, .content-nav a{
+  font-family: 'latoregular';
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+#main_container, #content{
+  height: 100%;
+}
+.page-content{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: -1;
+  overflow: hidden;
+}
+#home{
+  display: block;
+  z-index: 1;
+  top:0;
+  background-image: url(../images/home-bg.jpg);
+}
+#about{
+  background-image: url(../images/about-bg.jpg);
+}
+#clients{
+  background-image: url(../images/clients-bg.jpg);
+}
+#contact{
+  background-image: url(../images/contact-bg.jpg);
+}
+.home #home, .about #about, .clients #clients, .contact #contact{
+  /*z-index: 6 !important;*/
+}
+/*.about .page-content, .clients .page-content, .contact .page-content{
+  top: 0;
+  left: -100%;
+}
+.about #about, .clients #clients, .contact #contact{
+  left: 0;
+}
+.home .page-content{
+  top: 100%;
+}*/
+.home #home{
+  top: 0;
+}
+.inner{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  padding-top: 250px;
+}
+.logo{
+  width: 220px;
+  margin: 0 auto;
+  display: none;
+}
+.logo img{
+  max-width: 100%;
+}
+.content-nav{
+  margin-top: 50px;
+  display: none;
+}
+.content-nav li{
+  margin-right: 40px;
+}
+.content-nav a{
+  font-size: 18px;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.social-icons{
+  margin-top: 190px;
+  display: none;
+}
+.social-icons li, .social-icons a{
+  display: inline-block;
+}
+.social-icons li:first-child{
+  margin-right: 45px;
+}
+.social-icons a{
+  height: 26px;
+  width: 26px;
+  background-position: center center;
+  background-repeat: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.social-icons .twitter a{
+  background-image: url(../images/icons/twitter.png);
+  height: 24px;
+  margin-top: 2px;
+}
+.social-icons .instagram a{
+  background-image: url(../images/icons/instagram.png);
+  height: 25px;
+  margin-top: 1px;
+}
+.social-icons a:hover{
+  opacity: 0.8;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+/*contact*/
+#contact .inner{
+  display: none;
+}
+.enquiries{
+  margin-top: 80px;
+}
+.enquiries p{
+  font-family: 'droid_serifitalic';
+  color: white;
+  font-size: 17px;
+  padding-bottom: 25px;
+}
+.enquiries a{
+  display: inline-block;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  text-decoration: none;
+}
+.enquiries .contact-email{
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 15px 40px 15px 40px;
+  font-family: 'latoregular';
+  font-size: 21px;
+  border-radius: 5px;
+  background: rgba(0,0,0,0.25);
+  color: white;
+}
+.enquiries .contact-email:hover{
+  background: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,0.8);
+}
+.enquiries .or{
+  width: 70px;
+  font-family: 'droid_serifitalic';
+  font-size: 16px;
+  vertical-align: middle;
+  display: inline-block;
+}
+#contact .social-icons{
+  margin-top: 110px;
+}
+/* About */
+#about h1,#about p,#about div{
+  color: #000000;
+}
+#about h1{
+  text-transform: uppercase;
+  font-family: 'latoregular';
+  font-size: 29px;
+  color: #333333;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+}
+#about .column{
+  display: inline-block;
+  width: 250px;
+  text-align: left;
+  vertical-align: top;
+  margin-right: 70px;
+}
+#about .column.first{
+  width: 235px;
+}
+#about .column.third{
+  margin-right: 0;
+  width: 325px;
+}
+#about .column p{
+  padding: 5px;
+  margin: 0;
+  font-family: 'latoregular';
+  font-size: 15px;
+  color: #333333;
+  line-height: 26px;
+}
+#about .services{
+  padding-bottom: 0 !important;
+}
+#about .column ul li{
+  margin-left: 25px;
+  padding-bottom: 7px;
+  color: #333333;
+}
+/* clients */
+#clients .inner{
+  padding-top: 150px;
+  width: 100%;
+}
+#clients h1{
+  font-family: 'latoregular';
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 30px;
+}
+#clients p{
+  font-family: 'droid_serifitalic';
+  font-size: 16px;
+  color: white;
+  line-height: 21px;
+  width: 560px;
+  margin: 0 auto;
+}
+.client-logos{
+  width: 100%;
+  display: table;
+  position: absolute;
+  bottom: 0;
+}
+.client-logos a{
+  display: table-cell;
+  width: 25%;
+  margin-left: -1px;
+  height: 250px;
+  float: left;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-right: 1px solid rgba(0,0,0,0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.client-logos a p{
+  margin-top: 180px !important;
+  font-size: 14px !important;
+  width: auto !important;
+}
+#clients table{
+  width: 100%;
+  border-spacing: 0;
+  position: absolute;
+  bottom: 0;
+}
+#clients table tr{
+}
+#clients table td{
+  height: 250px;
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-right: 1px solid rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0;
+  width: 33.333%;
+  line-height: 0;
+}
+#clients table td a{
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.client-logos a.matthew-miller{
+  background: url(../images/logos/matthew_miller_logo.png) no-repeat center center;
+}
+.client-logos a.other-shop{
+  background: url(../images/logos/other_shop_logo.png) no-repeat center center;
+}
+.client-logos a.galvin{
+  background: url(../images/logos/galvin_logo.png) no-repeat center center;
+  
+}
+.client-logos a.betty{
+  background: url(../images/logos/betty_logo.png) no-repeat center center;
+    border-right: none;
+}
+.client-logos a.style-pb{
+  background: url(../images/logos/style_pb_logo.png) no-repeat center center;
+}
+.client-logos a.darkroom{
+  background: url(../images/logos/darkroom_logo.png) no-repeat center center;
+  
+}
+.client-logos a.fuel{
+  background: url(../images/logos/fuel_logo.png) no-repeat center center;
+ 
+}
+.client-logos a.ldm{
+  background: url(../images/logos/ldm_logo.png) no-repeat center center;
+  border-right: none;
+}
+.client-logos a:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+#clients table td:last-child{
+  border-right: none;
+}
+
+#show-mobile-menu{
+  width: 24px;
+  height: 24px;
+  float: right;
+  padding: 5px;
+  padding-top: 8px;
+  background: url(../images/hamburger-menu-icon.png) no-repeat center center;
+  display: none !important;
+}
+
+/********** MEDIA QUERIES **********/
+
+/*--- iPhone5 and below */
+
+@media all and (max-width: 600px){
+  #show-mobile-menu{
+    display: inline-block !important;
+  }
+  .inner{
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  #home .content-nav li{
+    display: block;
+    margin-right: 0;
+  }
+  #home .social-icons{
+    margin-top: 90px;
+  }
+  #main_header{
+    height: 40px;
+    overflow: hidden;
+  }
+  #main_header ul{
+    padding-top: 11px;
+    display: inline-block;
+    float: left;
+  }
+  #main_header ul li{
+    margin-right: 0;
+    display: block;
+    padding: 0 0 10px 20px;
+    text-align: left;
+  }
+  #main_header ul li:first-child{
+    display: block;
+  }
+
+  #about .inner{
+    padding-top: 70px;
+  }
+  #about h1{
+    padding-left: 11px;
+  }
+  #about .column{
+    padding: 5px;
+    width: 100%;
+    float: left;
+  }
+  #about .column p, #about .column ul{
+    padding: 10px;
+  }
+   #about .column ul{
+   /*padding-bottom: 0;*/
+   }
+   #about .column ul li:last-child{
+    padding-bottom: 0;
+   }
+
+  #clients .inner{
+    padding-top: 70px;
+  }
+  #clients table{
+    position: static;
+    margin-top: 50px;
+  }
+  #clients table td{
+    display: block;
+    height: 80px;
+    width: 100%;
+  }
+  #clients p{
+    width: 90%;
+    font-size: 13px;
+  }
+  .client-logos a{
+    width: 100%;
+    border-right: none !important;
+  }
+  .client-logos a.darkroom, .client-logos a.galvin, .client-logos a.matthew-miller{
+    background-size: 80%;
+  }
+  #contact .inner{
+    padding-top: 70px;
+  }
+  #contact .enquiries{
+    margin-top: 50px;
+  }
+  #contact .contact-email{
+    width: 90%;
+    padding: 10px 0 10px 0;
+  }
+  #contact .or{
+    padding: 10px;
+  }
+  #contact .social-icons{
+    margin-top: 40px;
+  }
+}
+@media all and (max-width: 700px){
+  #contact .contact-email{
+    width: 90%;
+    padding: 10px 0 10px 0;
+  }
+  #contact .or{
+    padding: 10px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 960px){
+  #about .inner{
+    padding-top: 120px;
+  }
+  #about .column.first{
+    float: none;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  #about .column.second, #about .column.third{
+    width: 45%;
+    margin-right: 0;
+    display: inline-block;
+  }
+  #about .column.third{
+    float: right;
+  }
+  #clients table{
+    margin-top: 170px;
+  }
+  .client-logos a{
+    width: 50%;
+  }
+  #clients table td a{
+    height: 100%;
+    width: 100%;
+  }
+  .client-logos a{
+    border-right: 1px solid rgba(0,0,0,0.2) !important;
+  }
+  .client-logos a.other-shop, .client-logos a.betty, .client-logos a.darkroom{
+    border-right: none !important;
+  }
+  .client-logos a.darkroom, .client-logos a.galvin, .client-logos a.matthew-miller{
+    background-size: 70%;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 1366px){
+  .inner{
+    padding-top: 120px;
+  }
+  #contact .inner, #about .inner{
+    padding-top: 130px;
+  }
+  .client-logos a.darkroom, .client-logos a.galvin, .client-logos a.matthew-miller{
+    background-size: 80%;
+  }
+}
+@media screen and ( min-height: 850px ) and (min-width: 960px) and (max-width: 1366px){
+  #clients .client-logos{
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media all and (min-width: 1024px) and (max-width: 1366px){
+  #about .inner{
+    margin-top: 50px;
+  }
+}
+@media all and (max-width: 1366px){
+  .client-logos{
+    position: static;
+    margin-top: 100px;
+  }
+  .page-content{
+    height: auto;
+    min-height: 100%;
+  }
+}
